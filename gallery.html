@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:600,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Files/CSS/gallery.css">
+    <link rel="stylesheet" href="./Files/CSS/responsive.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar" style="background: white !important;">
+            <div class="container">
+                <div class="wrapper">
+                    <img src="./Files/Images/main_logo.png" alt="logo" width="60px">
+                    <span><strong>optium fruits</strong><br>dried fruits from uzbekistan</span>
+                </div>
+                
+                <ul>
+                    <li><a href="./index.html#category">Категории</a></li>
+                    <li><a href="./index.html#about">О компании</a></li>
+                    <li><a href="./index.html#certificate">Сертификаты</a></li>
+                    <li><a href="./index.html#contact">Контакты</a></li>
+                    <div class="language px-1 rounded" style="background: rgba(0, 0, 0, 0.075)">
+                        <button class="l_btn btn_ru">Ru</button>
+                        <button class="l_btn btn_en">En</button>
+                    </div>
+                </ul>
+                <div class="menu" style="display: none;" onclick="openMenu()">
+                    <i class="fa-solid fa-bars-staggered py-2" style="font-size:36px;"></i>
+                </div>   
+                <div style="display: none;" class="menu_wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="upper_side">
+                                    <img class="ms-4" src="./Files/Images/main_logo.png" alt="" width="60">
+                                    <span><strong>optium fruits</strong><br>dried fruits from uzbekistan</span>
+                                    <div class="exit" onclick="closeMenu()" id="close"><i class="fa-solid fa-x fa-lg"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <ul id="menu_list">
+                                    <li class="list_item">
+                                        <a class="list_links" style="color: black !important;" onclick="closeMenu()"
+                                            href="./index.html#category">Категории</a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a class="list_links text-dark" style="color: black !important;"
+                                            onclick="closeMenu()" href="./index.html#about">О компании</a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a class="list_links" style="color: black !important;" onclick="closeMenu()"
+                                            href="./index.html#certificate">Сертификаты</a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a class="list_links" style="color: black !important;" onclick="closeMenu()"
+                                            href="./index.html#contact">Контакты</a>
+                                    </li>
+                                    <div class="language_s my-3">
+                                        <div class="lang_ru">RU</div>
+                                        <div class="lang_en">EN</div>
+                                    </div>
+                                    <a href="tel:+998999110204" class="number_m text-decoration-none"><span class="fas fa-phone"></span> +998999110204</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- <main>
+        <section class="main_in">
+            <div class="container">
+                <span class="home_text py-4"><a href="./index.html" style="text-decoration: none; color: black;">Главная</a> / Галерея</span>
+                <h3 class="gallery_text py-3">Галерея</h3>
+                <div class="grid">
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                </div>
+            </div>
+        </section>
+    </main> -->
+    <!-- gallery -->
+    <section >
+        <div class="container">
+            <span class="home_text pt-4"><a href="./index.html" style="text-decoration: none; color: black;">Главная</a> / Галерея</span>
+            <h1 class="py-5">Галерея</h1>
+            <div class="gallery-image ">
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/1.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Library</p>
+                            <p class="opacity-low">Architect Design</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/2.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Night Sky</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/3.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Tea Talk</p>
+                            <p class="opacity-low">Composite</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/4.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Road</p>
+                            <p class="opacity-low">Landscape</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/5.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Sea</p>
+                            <p class="opacity-low">Cityscape</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/6.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/7.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/8.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/9.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/10.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/11.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/12.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/8.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/5.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/2.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/3.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/1.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-box">
+                    <img src="./Files/Images/gallery/9.webp" alt="" />
+                    <div class="transparent-box">
+                        <div class="caption">
+                            <p>Vintage</p>
+                            <p class="opacity-low">Cinematic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <ul>
+            <li><a href="#category">Категории</a></li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#certificate">Сертификаты</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <hr class="footer_hr" style="display: none;">
+        <div class="cp">©2023 optium fruits dried druits from uzbekistan</div>
+    </footer>
+    <script src="./Files/JavaScript/main.js"></script>
+    <script src="./Files/JavaScript/vanilla.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

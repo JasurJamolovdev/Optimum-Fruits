@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Files/CSS/responsive.css">
+    <link rel="stylesheet" href="./Files/CSS/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Files/CSS/slider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // // And if we need scrollbar
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+        });
+    </script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header id="header" class="slider_1 swiper_wrapper">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo_image"></div>
+                    <p class="logo_text">Optium fruits <br><span>Dried fruits from uzbekistan</span></p>
+                </div>
+                <ul class="list nav_list">
+                    <li class="list_item">
+                        <a class="list_links" href="#category">Категории</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="list_links" href="#about">О компании</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="list_links" href="#certificate">Сертификаты</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="list_links" href="#contact">Контакты</a>
+                    </li>
+                    <div class="language">
+                        <button class="l_btn btn_ru">Ru</button>
+                        <button class="l_btn btn_en">En</button>
+                    </div>
+                </ul>
+                <div class="menu" style="display: none;" onclick="openMenu()">
+                    <i class="fa-solid fa-bars-staggered py-2" style="font-size:36px; color: white !important;"></i>
+                </div>
+            </div>
+            <div class="menu_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="upper_side">
+                                <div class="img"></div>
+                                <span style="color: black;"><strong>optium fruits</strong><br>dried fruits from
+                                    uzbekistan</span>
+                                <div class="exit" onclick="closeMenu()" id="close"><i
+                                        class="fa-solid fa-x text-dark"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <ul id="menu_list">
+                                <li class="list_item">
+                                    <a class="list_links" onclick="closeMenu()" href="#category">Категории</a>
+                                </li>
+                                <li class="list_item">
+                                    <a class="list_links" onclick="closeMenu()" href="#about">О компании</a>
+                                </li>
+                                <li class="list_item">
+                                    <a class="list_links" onclick="closeMenu()" href="#certificate">Сертификаты</a>
+                                </li>
+                                <li class="list_item">
+                                    <a class="list_links" onclick="closeMenu()" href="#contact">Контакты</a>
+                                </li>
+                                <div class="language_s">
+                                    <div class="lang_ru">RU</div>
+                                    <div class="lang_en">EN</div>
+                                </div>
+                                <a href="tel:+998999110204" class="number_m text-decoration-none"><span
+                                        class="fas fa-phone"></span> +998999110204</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="heading">
+            <div class="container">
+                <h1>Большой выбор сухофруктов</h1>
+                <p class="heading_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nulla ex
+                    aspernatur omnis porro quisquam ducimus? <br> Quod tenetur architecto harum voluptates, quos, iste
+                    ex distinctio <br> ab debitis ratione eos autem.</p>
+            </div>
+        </section>
+        <div class="arrows">
+            <i onclick="slideShow_3()" class="fa-solid fa-arrow-left"></i>
+            <i onclick="slideShow_2()" class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="circles">
+            <div class="dot_1" style="background-color: gray;"></div>
+            <div class="dot_2" style="background-color: gainsboro;"></div>
+            <div class="dot_3" style="background-color: gainsboro;"></div>
+        </div>
+    </header>
+
+    <header id="header" style="display: none;" class="slider_2">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo_image"></div>
+                    <p class="logo_text">Optium fruits <br><span>Dried fruits from uzbekistan</span></p>
+                </div>
+                <ul class="list nav_list">
+                    <li class="list_item">
+                        <a class="list_links" href="#category">Категории</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="list_links" href="#about">О компании</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="list_links" href="#certificate">Сертификаты</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="list_links" href="#contact">Контакты</a>
+                    </li>
+                    <div class="language">
+                        <button class="l_btn btn_ru">Ru</button>
+                        <button class="l_btn btn_en">En</button>
+                    </div>
+                </ul>
+                <div class="menu" style="display: none;" onclick="openMenu()">
+                    <i class="fa-solid fa-bars-staggered py-2" style="font-size:36px; color: white !important;"></i>
+                </div>
+            </div>
+            <div class="menu_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="upper_side">
+                                <div class="img"></div>
+                                <span style="color: black;"><strong>optium fruits</strong><br>dried fruits from
+                                    uzbekistan</span>
+                                <div class="exit" onclick="closeMenu()" id="close"><i
+                                        class="fa-solid fa-x text-dark"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <ul id="menu_list">
+                                <li class="list_item">
+                                    <a class="list_links" onclick="closeMenu()" href="#category">Категории</a>
+                                </li>
+                                <li class="list_item">
+                                    <a class="list_links" onclick="closeMenu()" href="#about">О компании</a>
+                                </li>
+                                <li class="list_item">
+                                    <a class="list_links" onclick="closeMenu()" href="#certificate">Сертификаты</a>
+                                </li>
+                                <li class="list_item">
+                                    <a class="list_links" onclick="closeMenu()" href="#contact">Контакты</a>
+                                </li>
+                                <div class="language_s">
+                                    <div class="lang_ru">RU</div>
+                                    <div class="lang_en">EN</div>
+                                </div>
+                                <a href="tel:+998999110204" class="number_m text-decoration-none"><span
+                                        class="fas fa-phone"></span> +998999110204</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="heading">
+            <div class="container">
+                <h1>Большой выбор сухофруктов</h1>
+                <p class="heading_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nulla ex
+                    aspernatur omnis porro quisquam ducimus? <br> Quod tenetur architecto harum voluptates, quos, iste
+                    ex distinctio <br> ab debitis ratione eos autem.</p>
+            </div>
+        </section>
+        <div class="arrows">
+            <i onclick="slideShow_1()" class="fa-solid fa-arrow-left"></i>
+            <i onclick="slideShow_3()" class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="circles">
+            <div class="dot_2" style="background-color: gainsboro;"></div>
+            <div class="dot_1" style="background-color: gray;"></div>
+            <div class="dot_3" style="background-color: gainsboro;"></div>
+        </div>
+    </header>
+
+    <header id="header" style="display: none;" class="slider_3">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo_image"></div>
+                    <p class="logo_text">Optium fruits <br><span>Dried fruits from uzbekistan</span></p>
+                </div>
+                <ul class="list nav_list">
+                    <li class="list_item">
+                        <a class="list_links" href="#category">Категории</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="list_links" href="#about">О компании</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="list_links" href="#certificate">Сертификаты</a>
+                    </li>
+                    <li class="list_item">
+                        <a class="list_links" href="#contact">Контакты</a>
+                    </li>
+                    <div class="language">
+                        <button class="l_btn btn_ru">Ru</button>
+                        <button class="l_btn btn_en">En</button>
+                    </div>
+                </ul>
+                <div class="menu" style="display: none;" onclick="openMenu()">
+                    <i class="fa-solid fa-bars-staggered py-2" style="font-size:36px; color: white !important;"></i>
+                </div>
+            </div>
+            <div class="menu_wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="upper_side">
+                                <div class="img"></div>
+                                <span style="color: black;"><strong>optium fruits</strong><br>dried fruits from
+                                    uzbekistan</span>
+                                <div class="exit" onclick="closeMenu()" id="close"><i
+                                        class="fa-solid fa-x text-dark"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <ul id="menu_list">
+                                <li class="list_item">
+                                    <a class="list_links" onclick="closeMenu()" href="#category">Категории</a>
+                                </li>
+                                <li class="list_item">
+                                    <a class="list_links" onclick="closeMenu()" href="#about">О компании</a>
+                                </li>
+                                <li class="list_item">
+                                    <a class="list_links" onclick="closeMenu()" href="#certificate">Сертификаты</a>
+                                </li>
+                                <li class="list_item">
+                                    <a class="list_links" onclick="closeMenu()" href="#contact">Контакты</a>
+                                </li>
+                                <div class="language_s">
+                                    <div class="lang_ru">RU</div>
+                                    <div class="lang_en">EN</div>
+                                </div>
+                                <a href="tel:+998999110204" class="number_m text-decoration-none"><span
+                                        class="fas fa-phone"></span> +998999110204</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="heading">
+            <div class="container">
+                <h1>Большой выбор сухофруктов</h1>
+                <p class="heading_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis nulla ex
+                    aspernatur omnis porro quisquam ducimus? <br> Quod tenetur architecto harum voluptates, quos, iste
+                    ex distinctio <br> ab debitis ratione eos autem.</p>
+            </div>
+        </section>
+        <div class="arrows">
+            <i onclick="slideShow_2()" class="fa-solid fa-arrow-left"></i>
+            <i onclick="slideShow_1()" class="fa-solid fa-arrow-right"></i>
+        </div>
+        <div class="circles">
+            <div class="dot_2" style="background-color: gainsboro;"></div>
+            <div class="dot_3" style="background-color: gainsboro;"></div>
+            <div class="dot_1" style="background-color: gray;"></div>
+        </div>
+    </header>
+
+    <main class="category" id="category">
+        <div class="container">
+            <h2 class="fw-bold py-2">Категория товаров</h1>
+                <div class="row">
+                    <div class="col-12 col-lg-7 my-3">
+                        <div class="fruits">
+                            <p>Сухофрукты</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5 my-3">
+                        <div class="beans">
+                            <p>Бабовые</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5 my-3">
+                        <div class="nuts">
+                            <p>Орехи</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-7 my-3">
+                        <div class="species">
+                            <p>Специи</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </main>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <img class="img-fluid" src="./Files/Images/dried-fruits-img.jpg" alt="alt">
+                </div>
+                <div class="col-12 col-lg-6 my-5 my-lg-0">
+                    <div class="text">
+                        <h3>О компании</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit dolores laudantium quia
+                            itaque dignissimos laboriosam fugit voluptatibus, reiciendis, illo ad sapiente odio
+                            cupiditate? Sunt, eveniet. Aspernatur veritatis doloremque at, accusantium adipisci
+                            architecto repudiandae iusto accusamus id sit non illum voluptatum. Error repudiandae
+                            adipisci atque eos aperiam, voluptatibus aspernatur a sapiente porro.accusantium adipisci
+                            architecto repudiandae iusto accusamus id sit non illum voluptatum. Error repudiandae
+                            adipisci atque eos aperiam, voluptatibus aspernatur a sapiente porro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="preferences">
+        <div class="container py-4">
+            <h2 class="py-3">Преимущества</h2>
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="column">
+                        <p class="py-2">
+                            <span class="fa-solid fa-suitcase fa-xl"></span>
+                            Более 70 видов товара
+                        </p>
+                        <p class="py-2">
+                            <span class="fa-solid fa-recycle fa-xl"></span>
+                            Оперативный расчет логистики по всему миру
+                        </p>
+                        <p class="py-2">
+                            <span class="fa-solid fa-people-group fa-xl"></span>
+                            Гибкие условия работы с постоянными клиентами
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="column column_2">
+                        <p class="py-2">
+                            <span class="fa-solid fa-seedling fa-xl"></span>
+                            Только экологически чистый продукт
+                        </p>
+                        <p class="py-2">
+                            <span class="fa-solid fa-signature fa-xl"></span>
+                            Есть сертификаты на все товары
+                        </p>
+                        <p class="py-2">
+                            <span class="fa-solid fa-eye fa-xl"></span>
+                            Возможность заказа образцов продукции
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="certificate" class="container">
+        <div class="swiper py-5">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide text-center">
+                    <img src="./Files/Images/certificate_image.png" alt="" width="300">
+                </div>
+                <div class="swiper-slide text-center">
+                    <img src="./Files/Images/certificate_image.png" alt="" width="300">
+                </div>
+                <div class="swiper-slide text-center">
+                    <img src="./Files/Images/certificate_image.png" alt="" width="300">
+                </div>
+                <div class="swiper-slide text-center">
+                    <img src="./Files/Images/certificate_image.png" alt="" width="300">
+                </div>
+                <div class="swiper-slide text-center">
+                    <img src="./Files/Images/certificate_image.png" alt="" width="300">
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <section id="gallery">
+        <div class="container my-4">
+            <h3 class="fw-bold">Галерея</h3>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <img class="img-fluid" src="./Files/Images/garden_image.jpg" alt="alt">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <img class="img-fluid" src="./Files/Images/garden_image.jpg" alt="alt">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <img class="img-fluid" src="./Files/Images/garden_image.jpg" alt="alt">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <img class="img-fluid" src="./Files/Images/garden_image.jpg" alt="alt">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <img class="img-fluid" src="./Files/Images/garden_image.jpg" alt="alt">
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 my-2">
+                    <img class="img-fluid" src="./Files/Images/garden_image.jpg" alt="alt">
+                </div>
+            </div>
+            <center>
+                <a href="./gallery.html" class="gallery_link"><button>Посмотреть все <span
+                            class="fa-solid fa-arrow-right"></span></button></a>
+            </center>
+        </div>
+    </section>
+
+    <section class="contact py-5" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-4 my-5">
+                    <div class="contacts">
+                        <h3 class="fw-bold">Контакты</h3>
+                        <div class="phone fw-bold"><span class="fa-solid fa-phone "></span> +1(513)264-2969</div>
+                        <hr>
+                        <div class="message fw-bold"><span class="fa-solid fa-message"></span> +1(513)264-2969</div>
+                        <p class="fw-bold">Социальные сети</p>
+                        <div class="social">
+                            <a href=""><span class="fa-brands fa-telegram"></span></a>
+                            <a href=""><span class="fa-brands fa-instagram"></span></a>
+                            <a href=""><span class="fa-brands fa-facebook"></span></a>
+                            <a href=""><span class="fa-brands fa-youtube"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8 ">
+                    <!-- google map section -->
+                    <div id="map" style="width: 100% !important; height: 300px;"></div>
+                    <!-- end google map section -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <ul>
+            <li><a href="#category">Категории</a></li>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#certificate">Сертификаты</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+        <hr class="footer_hr" style="display: none;">
+        <div class="cp">©2023 optium fruits dried druits from uzbekistan</div>
+    </footer>
+
+</body>
+
+<script src="./Files/JavaScript/slider.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="./Files/JavaScript/vanilla.js"></script>
+<script src="./Files/JavaScript/main.js"></script>
+<script src="./Files/JavaScript/yandexmap.js"></script>
+<script type="text/javascript">
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop()) {
+            $('.navbar').addClass('black');
+        }
+        else {
+            $('.navbar').removeClass('black');
+        }
+    })
+// /*menu button onclick function*/         $(document).ready(function(){
+//             $('.menu h4').click(function(){
+//                 $("nav ul").toggleClass("active")
+//         })
+//         })
+</script>
+
+</html>

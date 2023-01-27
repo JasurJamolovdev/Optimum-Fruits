@@ -1,0 +1,190 @@
+@media screen and (max-width: 1289px) {
+    .about > .image {
+        width: 50% !important;
+        margin-top: 90px !important;
+    }
+    .about > .text {
+        width: 45% !important;
+    }
+    #gallery {
+        min-width: 90%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .about {
+        transform: translateY(450px);
+        flex-direction: column-reverse;
+    }
+    #gallery {
+        min-width: 98%;
+    }
+    .text {
+        width: 70% !important;
+    }
+    .category {
+        text-align: center;
+    }
+    .line {
+        flex-direction: column !important;
+        height: 70vh !important;
+    }
+    .line > div {
+        width: 70% !important;
+    }
+    .preferences {
+        margin-top: 490px !important;
+    }
+}
+
+@media screen and (max-width: 865px) {
+    .grid_image {
+        grid-template-columns: auto auto !important;
+        grid-template-rows: 250px 250px 250px !important;
+    }
+    .contact {
+        flex-direction: column;
+        height: 95vh !important;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .about > .image {
+        width: 70% !important;
+        margin-top: 100px !important;
+    }
+    .grid_image {
+        grid-template-columns: auto auto !important;
+        grid-template-rows: 200px 200px 200px !important;
+    }
+    .card_last {
+        display: none;
+    }
+    .about > .text {
+        width: 70% !important;
+    }
+    .line {
+        min-width: 100%;
+    }
+    .line > div {
+        width: 85% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(0, 0, 0, 0.743) !important;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .grid_image {
+        grid-template-columns: auto auto !important;
+        grid-template-rows: 180px 180px 180px !important;
+    }
+    .about > .image {
+        width: 85% !important;
+        height: 30vh !important;
+    }
+    .about > .text {
+        width: 85% !important;
+    }
+    .about {
+        height: 130vh;
+    }
+    .preferences > .column > p {
+        margin: 10px 3px !important;
+    }
+    .preferences .column p {
+        padding: 0 !important;
+    }
+}
+
+@media screen and (max-width: 580px) { 
+    #footer ul {
+        flex-direction: column;
+    }
+    .footer_hr {
+        display: block !important;
+        border-color: aliceblue !important;
+        background-color: aliceblue;
+    }
+    .contacts {
+        height: 266px !important;
+        width: 270px !important;
+    }
+    .map {
+        width: 300px !important;
+        height: 260px !important;
+    }
+    .preferences > .column {
+        display: block !important; 
+        text-align: center !important;
+        width: 100% !important;
+        padding: 3px 0;
+    }
+    .swiper {
+        width: 100% !important;
+
+    }   
+    #gallery h3 {
+        text-align: center;
+    }
+    .grid_image {
+        grid-template-rows: 150px 150px 150px !important;
+    }
+    .preferences > h2 {
+        text-align: center !important;
+    }
+    .logo {
+        width: 70% !important;
+    }
+    .heading {
+        width: 90%;
+        margin-top: 10%;
+        padding-top: 30px;
+    }
+    #navbar {
+        margin: 0 !important;
+        position: relative;
+        top: 0;
+        left: 0;
+        height: fit-content !important;
+        background-color: rgba(240, 248, 255, 0.361) !important;
+        backdrop-filter: blur(30px) !important;
+        -webkit-backdrop-filter: blur(30px);
+    }
+    #navbar > * {
+        color: #111 !important;
+    }
+    .menu_bar {
+        background-color: #111 !important;
+        box-shadow: 0 9px 0 #111, 0 -9px 0 #111 !important;
+    }
+    .category {
+        min-width: 100%;
+    }
+    .line > div {
+        width: 98% !important;
+        height: 25vh;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .grid_image {
+        max-width: 90%;
+        margin: 0 auto;
+        grid-template-columns: auto !important;
+        grid-template-rows: 250px 250px 250px !important;
+        grid-gap: 15px 20px !important;
+    }
+    .gallery_link {
+        margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .image {
+        margin-top: 130px !important;
+        max-height: 25vh !important;
+    }
+}
+

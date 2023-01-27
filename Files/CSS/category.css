@@ -1,0 +1,393 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html 
+{
+    scroll-behavior: smooth;
+}
+nav 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.384);
+}
+.wrapper .logo
+{
+    background-image: url('../Images/main_logo.png');
+    width: 60px;
+    height: 56px;
+    background-size: cover;
+}
+.wrapper 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper span, .upper_side span
+{
+    text-transform: uppercase;
+    font-size: small;
+    display: inline-block;
+    margin: 0 2px;
+}
+.wrapper span strong, .upper_side span strong
+{
+    font-weight: 500;
+    font-size: large;
+}
+nav ul 
+{
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li 
+{
+    margin: 0 2px;
+    list-style-type: none;
+    padding: 4px 8px;
+}
+nav ul li a 
+{
+    text-decoration: none;
+    color: #000 !important;
+}
+footer 
+{
+    padding: 10px 0;
+    background-color: #111;
+}
+
+footer ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer ul li 
+{
+    list-style: none;
+    margin: 2px 4px;
+}
+footer ul li a
+{
+    text-decoration: none;
+    color: #fff;
+}
+footer .cp 
+{
+    color: #fff;
+    text-align: center;
+    font-size: x-small;
+    padding: 10px 0;
+}
+
+
+aside 
+{
+    width: 20%;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.384);
+    height: 105vh;
+    z-index: -11;
+}
+
+aside div 
+{
+    width: 70%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 8px 0;
+    margin-right: 5px;
+}
+aside div strong
+{
+    text-align: left;
+}
+aside div small
+{
+    text-align: right !important;
+    float: right;
+}
+aside hr 
+{
+    width: 70%;
+    margin-left: auto;
+    margin-right: 5px;
+}
+aside h3 
+{
+    text-align: center !important;
+    font-size: x-large;
+    padding: 27px 0;
+}
+main 
+{
+    position: relative;
+    top: 0;
+    padding: 40px 0;
+}
+.rectangle h4
+{
+    font-size: large;
+}
+.stick 
+{
+    height: 14px;
+    width: 5px;
+    background-color: #ffc048;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.pad
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardc
+{
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.205);
+    margin: 5px 0;
+}
+.cardc p {
+    color: rgb(129, 129, 129);
+}
+
+.img 
+{
+    width: 100%;
+    height: 44%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-image: url('../Images/dried_fruits_img.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.text
+{
+    padding: 10px 2px;
+}
+
+
+@media screen and (max-width:1275px) {
+    aside div {
+        width: 100%;
+    }
+    aside hr {
+        width: 100%;
+    }
+}
+@media screen and (max-width:910px) {
+    aside {
+        display: none !important;
+    }
+    section {
+        left: 0;
+        top: 5px;
+    }
+    .rectangle {
+        width: 90vw;
+    }
+    .rectangle .cardc 
+    {
+        margin: 0 5px;
+    }
+    .sort {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .border {
+        margin-top: 18px;
+        margin-right: 15px;
+        margin-left: 15px;
+        text-align: center;
+        border: 0.5px solid #000;
+        padding: 10px 0;
+        width: 100%;
+        border-radius: 10px;
+    }
+    .border * {
+        display: inline-block;
+        margin: 0 4px;
+    }
+}
+@media screen and (max-width: 710px) {
+    nav ul {
+        display: none;
+    }
+    nav .menu {
+        display: inline-block !important;
+    }
+
+}
+@media screen and (max-width: 580px) {
+    .content {
+        flex-wrap: wrap;
+    }
+    .rectangle {
+        height: 100%;
+    }
+    .rectangle .cardc 
+    {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 352px) {
+    .cardc {
+        min-width: 200px !important;
+        text-align: center;
+    }
+    .img {
+        height: 53%;
+    }
+    .rectangle {
+        height: 117vh;
+    }
+}
+
+
+/* menu wrapper */
+.menu_wrapper 
+{
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    padding: 0 10px;
+    box-shadow: 0 0 60px 10px #000;
+    height: 100vh;
+    background-color: white;
+    right: 0;
+    top: 0;
+    animation: introMenu 0.45s linear;
+}
+@keyframes introMenu {
+    0% {
+        right: -200px;
+        transform: rotateY(90deg);
+    }
+}
+.menu_wrapper .upper_side 
+{
+    margin: 13px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.upper_side .img {
+    background-image: url('../Images/main_logo.png');
+    width: 65px;
+    height: 60px;
+    background-size: cover;
+}
+.exit {
+    padding: 10px;
+    font-weight: 900;
+    font-size: large;
+}
+.menu_wrapper ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center !important;
+}language_s
+.menu_wrapper ul li {
+    padding: 2px 5px !important;
+    margin: 20px 0 !important;
+    list-style: none !important;
+}
+.menu_wrapper ul li a {
+    color: rgb(255, 255, 255) !important;
+    font-size: x-large !important;
+    font-weight: 567 !important;
+}
+/* language btn styles */
+
+.l_btn
+{
+    padding: 0px 8px;
+    text-transform: uppercase;
+    border: 0.25px solid #fff;
+    border-radius: 2px;
+}
+.btn_ru
+{
+    background-image: url("../Images/flag_ru.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+}
+.btn_en 
+{
+    background-image: url("../Images/flag_english.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    box-shadow: 0 0 1px #fff;
+}
+.btn_en:hover 
+{
+    opacity: 100%;
+}
+.l_btn:active
+{
+    filter: brightness(70%);
+}
+
+/* btns and number */
+
+.number_m
+{
+    border: 0.4px solid #000;
+    display: inline-block;
+    margin: 10px 0;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-weight: 600;
+    color: black !important;
+}
+.language_s {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.language_s div {
+    border-radius: 8px;
+    font-size: large;
+    color: #000;
+    font-weight: 500;
+    width: 55px;
+    height: 35px;
+    border: 0.2px solid #000;
+    margin: 2px;
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+.lang_ru {
+    color: white !important;
+    box-shadow: 0 0 10px #00000025;
+    background-image: url('../Images/flag_ru.jpg');
+    border: 1px solid rgba(59, 59, 59, 0.486) !important;
+}
+.lang_en {
+    color: white !important;
+    background-image: url('../Images/flag_english.png');
+    border: 1px solid rgba(59, 59, 59, 0.486) !important;
+}
